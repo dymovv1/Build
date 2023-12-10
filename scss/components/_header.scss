@@ -1,0 +1,202 @@
+.header {
+    background-color: $blue;
+    padding: 10px 0;
+    &-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-nav {
+        display: flex;
+        gap: $gap-pc;
+    }
+    &-nav__li {
+        @include nav_li;
+    } 
+    &-nav__li:hover {
+        background-color: $gray;
+        color: $black;
+    }
+    &-logo {
+        font-size: $font-36px;
+        font-weight: 600;
+        color: powderblue;
+    }
+    &-langs__additional {
+        display: none;
+        transition: all 0.3s;
+    }
+    &-langs__additional.is-active {
+        display: flex;
+        flex-direction: column;
+        background: $blue-lite;
+        position: absolute;
+        border-radius: $border-radius;
+        animation: fromDown;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+    }
+    &-lang__toggle:hover {
+        transition: all 0.3s;
+        background-color: $black;
+        border-radius: $border-radius;
+    }
+    &-langs {
+        margin-right: 50px;
+    }
+    &-navigation , &-wrapper {
+        display: contents;
+    }
+}
+// burger-menu
+
+.burger {
+    &-menu {
+        width: 40px;
+        display: none;
+        gap: 7px;
+        flex-direction: column;
+        border-radius: $border-radius;
+    }
+    &-line {
+        display: inline-flex;
+        width: 35px;
+        height: 3px;
+        background-color: $gray;
+        transition: all 0.3s;
+    }
+    &-line.is-active:nth-child(2) {
+        width: 20px;
+    }
+    &-line.is-active {
+        border-radius: 10px;
+    }
+
+       
+}
+
+// style for btn-lang (#id)
+
+#france, #netherlands, #english {
+    @include langBtns
+}
+#lang-logo {
+    color: $white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+#lang-logo:hover {
+    border: 1px solid $white;
+    opacity: 0.75;
+
+}
+#lang-logo::after {
+    content: url(../../assets/img/arrow_down.png);
+    display: inline-flex;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+// amnimation for additional lang
+
+@keyframes fromDown {
+    100% {
+        position: absolute;
+        opacity: 1;
+    }
+    75% {
+        position: absolute;
+        opacity: 0.9;
+    }
+
+    50% {
+        position: absolute;
+        opacity: 0.7;
+
+    }
+    25% {
+        position: absolute;
+        opacity: 0.3;
+
+    }
+    0% {
+        position: absolute;
+        opacity: 0;
+    }
+}
+
+// animation for burger-menu 
+
+@keyframes left {
+    100% {
+        position: absolute;
+        left: 0;
+    }
+    75% {
+        position: absolute;
+        left: 15;
+    }
+
+    50% {
+        position: absolute;
+        left: 35;
+
+    }
+    25% {
+        position: absolute;
+        left: 67;
+
+    }
+    0% {
+        position: absolute;
+        left: 80;
+    }
+    
+}
+
+// adaptive (media request)
+
+@media screen and (max-width: 886px) {
+    .header {
+        &-nav , &-langs {
+            display: none;
+        }
+        &-navigation {
+            display: flex;
+        }
+        &-nav.is-active{
+            display: flex;
+            flex-direction: column;
+            gap: $gap-mobile;      
+        }
+        &-langs.is-active {
+            display: inline-flex;
+        }
+        &-wrapper {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            background: $blue;
+            left: 0;
+            top: 0;
+            transition: all 0.5s;
+        }
+        &-wrapper.is-active {
+            height: 100svh;
+            // padding: 20px 10px 10px 20px;
+            width: 250px;
+        }
+    }
+    .mr-30px {
+        margin-bottom: 30px;
+    }
+    .burger-menu {
+        display: inline-flex;
+    }
+    
+}

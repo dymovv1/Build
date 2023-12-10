@@ -1,0 +1,32 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: top;
+	max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: $black;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: $black;
+}
+
+h1 {
+    font-size: $font-42px;
+}
+h2,h3 {
+    font-size: $font-36px;
+}

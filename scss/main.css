@@ -1,0 +1,276 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: #000000;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2, h3 {
+  font-size: 36px;
+}
+
+.container {
+  max-width: 1380px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+
+/* noto-sans-300 - cyrillic_greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../assets/fonts/noto-sans-v35-cyrillic_greek_latin_latin-ext-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-regular - cyrillic_greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/noto-sans-v35-cyrillic_greek_latin_latin-ext-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-500 - cyrillic_greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/noto-sans-v35-cyrillic_greek_latin_latin-ext-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-600 - cyrillic_greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/noto-sans-v35-cyrillic_greek_latin_latin-ext-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-700 - cyrillic_greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/noto-sans-v35-cyrillic_greek_latin_latin-ext-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-800 - cyrillic_greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../assets/fonts/noto-sans-v35-cyrillic_greek_latin_latin-ext-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.header {
+  background-color: #4e73b7;
+  padding: 10px 0;
+}
+.header-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  gap: 35px;
+}
+.header-nav__li {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+.header-nav__li:hover {
+  background-color: #f3f6f8;
+  color: #000000;
+}
+.header-logo {
+  font-size: 36px;
+  font-weight: 600;
+  color: powderblue;
+}
+.header-langs__additional {
+  display: none;
+  transition: all 0.3s;
+}
+.header-langs__additional.is-active {
+  display: flex;
+  flex-direction: column;
+  background: #6495ed;
+  position: absolute;
+  border-radius: 5px;
+  animation: fromDown;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+.header-lang__toggle:hover {
+  transition: all 0.3s;
+  background-color: #000000;
+  border-radius: 5px;
+}
+.header-langs {
+  margin-right: 50px;
+}
+.header-navigation, .header-wrapper {
+  display: contents;
+}
+
+.burger-menu {
+  width: 40px;
+  display: none;
+  gap: 7px;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.burger-line {
+  display: inline-flex;
+  width: 35px;
+  height: 3px;
+  background-color: #f3f6f8;
+  transition: all 0.3s;
+}
+.burger-line.is-active:nth-child(2) {
+  width: 20px;
+}
+.burger-line.is-active {
+  border-radius: 10px;
+}
+
+#france, #netherlands, #english {
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+
+#lang-logo {
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+#lang-logo:hover {
+  border: 1px solid #FFFFFF;
+  opacity: 0.75;
+}
+
+#lang-logo::after {
+  content: url(../../assets/img/arrow_down.png);
+  display: inline-flex;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+@keyframes fromDown {
+  100% {
+    position: absolute;
+    opacity: 1;
+  }
+  75% {
+    position: absolute;
+    opacity: 0.9;
+  }
+  50% {
+    position: absolute;
+    opacity: 0.7;
+  }
+  25% {
+    position: absolute;
+    opacity: 0.3;
+  }
+  0% {
+    position: absolute;
+    opacity: 0;
+  }
+}
+@keyframes left {
+  100% {
+    position: absolute;
+    left: 0;
+  }
+  75% {
+    position: absolute;
+    left: 15;
+  }
+  50% {
+    position: absolute;
+    left: 35;
+  }
+  25% {
+    position: absolute;
+    left: 67;
+  }
+  0% {
+    position: absolute;
+    left: 80;
+  }
+}
+@media screen and (max-width: 886px) {
+  .header-nav, .header-langs {
+    display: none;
+  }
+  .header-navigation {
+    display: flex;
+  }
+  .header-nav.is-active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header-langs.is-active {
+    display: inline-flex;
+  }
+  .header-wrapper {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background: #4e73b7;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+  }
+  .header-wrapper.is-active {
+    height: 100svh;
+    width: 250px;
+  }
+  .mr-30px {
+    margin-bottom: 30px;
+  }
+  .burger-menu {
+    display: inline-flex;
+  }
+}/*# sourceMappingURL=main.css.map */

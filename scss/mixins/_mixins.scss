@@ -1,0 +1,16 @@
+@mixin nav_li {
+    color: $white;
+    font-size: $font-18px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+@mixin langBtns {
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 2px 5px;
+}
