@@ -17,5 +17,6 @@ burgerMenu.addEventListener('click', ()=> {
     headerLangMobile.classList.toggle('is-active');
     headerNavigation.classList.toggle('is-active');
     headerWrapper.classList.toggle('is-active');
+    document.body.classList.toggle('is-blocked')
 
 })

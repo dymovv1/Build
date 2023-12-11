@@ -1,6 +1,12 @@
 .header {
     background-color: $blue;
     padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px -2px 8px 1px $black;
+    transition: transform 0.3s ease;
+    position: sticky;
+    top: 0;
     &-body {
         display: flex;
         justify-content: space-between;
@@ -57,6 +63,8 @@
         gap: 7px;
         flex-direction: column;
         border-radius: $border-radius;
+        position: relative;
+        z-index: 2;
     }
     &-line {
         display: inline-flex;
@@ -70,9 +78,27 @@
     }
     &-line.is-active {
         border-radius: 10px;
-    }
+    }  
+}
 
-       
+body.is-blocked {
+    overflow: hidden; /* Заборона прокрутки */
+}
+
+body.is-blocked::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    opacity: 0.7;
+    z-index: 1; 
+}
+
+.header.is-hidden { 
+    transform: translateY(-100%);
 }
 
 // style for btn-lang (#id)
@@ -134,29 +160,20 @@
 
 @keyframes left {
     100% {
-        position: absolute;
         left: 0;
     }
     75% {
-        position: absolute;
-        left: 15;
+        left: -15%;
     }
-
     50% {
-        position: absolute;
-        left: 35;
-
+        left: -35%;
     }
     25% {
-        position: absolute;
-        left: 67;
-
+        left: -67%;
     }
     0% {
-        position: absolute;
-        left: 80;
+        left: -80%;
     }
-    
 }
 
 // adaptive (media request)
@@ -177,6 +194,9 @@
         &-langs.is-active {
             display: inline-flex;
         }
+        &-langs__additional.is-active {
+            margin-top: 50px;
+        }
         &-wrapper {
             display: block;
             position: absolute;
@@ -185,11 +205,17 @@
             left: 0;
             top: 0;
             transition: all 0.5s;
+            
         }
         &-wrapper.is-active {
             height: 100svh;
-            // padding: 20px 10px 10px 20px;
+            padding: 20px 10px 10px 20px;
             width: 250px;
+            animation-name: left;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            z-index: 2;
+            box-shadow: 1px 7px 10px -4px $black;
         }
     }
     .mr-30px {

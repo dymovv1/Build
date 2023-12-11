@@ -1,0 +1,85 @@
+.main {
+    &-home {
+        background-image: url(../../assets/img/background_home.jpeg);
+        padding: 200px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: sticky;
+        top: 0;
+    }
+}
+
+
+.about {
+    &-title {
+        @include centerFlexJustifyAlign;
+        color: $white;
+        background-color: $blue-lite;
+        padding: 15px 0;
+        border-radius: $border-radius;
+        position: relative;
+        animation-name: leftBlockOpacity;
+        animation-duration: 0.8s;
+        animation-timing-function: linear;
+    }
+    &-title__text::after {
+        content: url(../../assets/img/helmet.png);
+    }
+    &-title__text {
+        @include centerFlexJustifyAlign;
+        gap: $gap-pc;
+    }
+    &-card {
+        padding-top: 100px;
+        @include centerFlexJustifyAlign;
+        flex-wrap: wrap;
+        gap: $gap-pc;
+    }
+    &-card__item {
+        background-color: $white;
+        @include centerFlexJustifyAlign;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: $border-radius;
+        gap: $gap-pc;
+        font-size: $font-22px;
+        text-transform: capitalize;
+        width: 350px;
+        text-align: center;
+        font-weight: 500;
+        box-shadow: 14px 14px 0px 1px $black;
+        transition: all 0.5s;
+    }
+    &-card__item:hover {
+        box-shadow: 14px -24px 0px 1px $blue-lite;
+    }
+}
+
+
+
+@keyframes leftBlockOpacity {
+    100% {
+        left: 0;
+        opacity: 1;
+
+    }
+    75% {
+        left: -15%;
+        opacity: 0.8;
+
+    }
+    50% {
+        left: -35%;
+        opacity: 0.6;
+
+    }
+    25% {
+        left: -67%;
+        opacity: 0.4;
+
+    }
+    0% {
+        left: -80%;
+        opacity: 0;
+    }
+}
