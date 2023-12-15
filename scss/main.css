@@ -335,6 +335,7 @@ body.is-blocked::before {
   animation-name: leftBlockOpacity;
   animation-duration: 0.8s;
   animation-timing-function: linear;
+  box-shadow: 2px 2px 5px 0px #000000;
 }
 .about-title__text::after {
   content: url(../../assets/img/helmet.png);
@@ -453,15 +454,15 @@ body.is-blocked::before {
   }
   75% {
     left: -15%;
-    opacity: 0.8;
+    opacity: 0.5;
   }
   50% {
     left: -35%;
-    opacity: 0.6;
+    opacity: 0.4;
   }
   25% {
     left: -67%;
-    opacity: 0.4;
+    opacity: 0.3;
   }
   0% {
     left: -80%;
@@ -473,14 +474,24 @@ body.is-blocked::before {
     font-size: 26px;
   }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 776px) {
   .about-title__text {
     font-size: 26px;
     flex-direction: column;
+    gap: 20px;
   }
   .about-title {
     padding: 1px 0px;
     gap: 20px;
     text-align: center;
+  }
+  .about-card__item:hover {
+    box-shadow: 10px -10px 0px 1px #6495ed;
+  }
+  .personal-title__text {
+    font-size: 18px;
+  }
+  .main-wrapper {
+    background-image: url(../../assets/img/background_home_mobile.png);
   }
 }/*# sourceMappingURL=main.css.map */
