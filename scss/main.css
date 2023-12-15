@@ -518,6 +518,9 @@ body.is-blocked::before {
   .personal-body {
     text-align: center;
   }
+  .personal-realization {
+    margin-bottom: 50px;
+  }
   .main-wrapper {
     background-image: url(../../assets/img/background_home_mobile.png);
   }
@@ -526,7 +529,6 @@ body.is-blocked::before {
   }
 }
 .swiper {
-  padding: 10px;
   border-radius: 5px;
   filter: drop-shadow(2px 4px 6px #000000);
 }
@@ -546,5 +548,8 @@ body.is-blocked::before {
   .swiper-slide__img {
     max-width: 400px;
     height: 300px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
