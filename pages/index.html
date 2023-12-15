@@ -99,6 +99,10 @@
                     data-france="Tous les membres du personnel ont une expérience suffisante pour leur permettre d’effectuer les tâches rapidement et efficacement."
                     data-netherlands="Alle medewerkers hebben voldoende ervaring om de taken snel en efficiënt uit te voeren.">
                     </h2>
+
+                    <div>
+                        <img class="personal-title__img" src="../assets/img/bulding_persons.jpg" alt="bulding_persons">
+                    </div>
                     </div>
 
                     <div>
@@ -145,10 +149,33 @@
             pagination: {
                 el: '.swiper-pagination',
             },
+            
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 5
+                },
+                // when window width is >= 480px
+                480: {
+                slidesPerView: 1,
+                spaceBetween: 5
+                },
+                // when window width is >= 640px
+                776: {
+                slidesPerView: 2,
+                spaceBetween: 10
+                },
+                1024: {
+                slidesPerView: 3,
+                spaceBetween: 10
+                }
+  }
         });
     </script>
     

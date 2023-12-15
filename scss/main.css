@@ -93,7 +93,7 @@ h2, h3 {
   background-color: #4e73b7;
   padding: 10px 0;
   position: relative;
-  z-index: 1;
+  z-index: 100;
   box-shadow: 0px -2px 8px 1px #000000;
   transition: transform 0.3s ease;
   position: sticky;
@@ -187,7 +187,7 @@ body.is-blocked::before {
   height: 100%;
   background: #000000;
   opacity: 0.7;
-  z-index: 1;
+  z-index: 99;
 }
 
 .header.is-hidden {
@@ -329,8 +329,8 @@ body.is-blocked::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
-  background-color: #6495ed;
+  color: #000000;
+  background-color: #FFFFFF;
   padding: 15px 0;
   border-radius: 5px;
   position: relative;
@@ -412,27 +412,34 @@ body.is-blocked::before {
 }
 
 .personal {
-  padding-top: 100px;
+  padding-top: 200px;
 }
 .personal-title {
   background-color: #FFFFFF;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
 }
 .personal-title__text {
   font-size: 22px;
   text-align: center;
+  padding: 10px;
 }
 .personal-realization {
   font-size: 26px;
   padding: 5px 10px;
-  color: white;
-  background-color: #000000;
-  display: inline-flex;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   border-radius: 5px;
+}
+.personal-title__img {
+  width: 500px;
 }
 
 @keyframes opacityBlock {
@@ -496,8 +503,20 @@ body.is-blocked::before {
   .about-card {
     padding-top: 70px;
   }
+  .personal {
+    padding-top: 100px;
+  }
   .personal-title__text {
     font-size: 18px;
+    max-width: 500px;
+  }
+  .personal-title {
+    flex-direction: column;
+    display: inline-flex;
+    margin-bottom: 70px;
+  }
+  .personal-body {
+    text-align: center;
   }
   .main-wrapper {
     background-image: url(../../assets/img/background_home_mobile.png);
@@ -517,6 +536,15 @@ body.is-blocked::before {
 }
 .swiper-slide__img {
   width: 600px;
-  height: 500px;
+  height: 450px;
   display: inline-block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+  .swiper-slide__img {
+    max-width: 400px;
+    height: 300px;
+  }
 }/*# sourceMappingURL=main.css.map */

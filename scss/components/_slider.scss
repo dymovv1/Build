@@ -8,8 +8,19 @@
     }
     &-slide__img {
         width: 600px;
-        height: 500px;
+        height: 450px;
         display: inline-block;
+        object-fit: cover;
 
     }
+}
+
+@media screen  and (max-width: 500px) {
+    .swiper {
+        &-slide__img {
+            max-width: 400px;
+            height: 300px;
+     }
+    }
+    
 }

@@ -17,8 +17,8 @@
 .about {
     &-title {
         @include centerFlexJustifyAlign;
-        color: $white;
-        background-color: $blue-lite;
+        color: $black;
+        background-color: $white;
         padding: 15px 0;
         border-radius: $border-radius;
         position: relative;
@@ -90,26 +90,31 @@
 }
 
 .personal {
-    padding-top: 100px;
+    padding-top: 200px;
     &-title {
         background-color: $white;
-        padding: 10px;
-        border-radius: $border-radius;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
+        display: flex;
+        align-items: center;
     }
     &-title__text {
         font-size: $font-22px;
         text-align: center;
+        padding: 10px;
     }
     &-realization {
         font-size: $font-26px;
         padding: 5px 10px;
-        color: white;
-        background-color: $black;
-        display: inline-flex;
+        color: $black;
+        @include centerFlexJustifyAlign;
+        background-color: $white;
+        font-weight: 500;
         text-transform: uppercase;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         border-radius: $border-radius;
+    }
+    &-title__img{
+        width: 500px;
     }
 }
 
@@ -193,8 +198,18 @@
         }
     }
     .personal {
+        padding-top: 100px;
         &-title__text {
             font-size: $font-18px;
+            max-width: 500px;
+        }
+        &-title {
+            flex-direction: column;
+            display: inline-flex;
+            margin-bottom: 70px;
+        }
+        &-body {
+            text-align: center;
         }
     }
     .main {
