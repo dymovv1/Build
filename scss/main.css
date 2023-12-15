@@ -488,10 +488,16 @@ body.is-blocked::before {
   .about-card__item:hover {
     box-shadow: 10px -10px 0px 1px #6495ed;
   }
+  .about-card {
+    padding-top: 70px;
+  }
   .personal-title__text {
     font-size: 18px;
   }
   .main-wrapper {
     background-image: url(../../assets/img/background_home_mobile.png);
+  }
+  .main-home {
+    padding-top: 70px;
   }
 }/*# sourceMappingURL=main.css.map */
