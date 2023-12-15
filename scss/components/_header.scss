@@ -82,7 +82,7 @@
 }
 
 body.is-blocked {
-    overflow: hidden; /* Заборона прокрутки */
+    overflow: hidden;
 }
 
 body.is-blocked::before {
