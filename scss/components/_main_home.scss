@@ -10,7 +10,8 @@
     height: 100%;
     width: 100%;
     margin: 0;
-    background-size: cover
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .about {
@@ -94,18 +95,21 @@
         background-color: $white;
         padding: 10px;
         border-radius: $border-radius;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
     &-title__text {
         font-size: $font-22px;
         text-align: center;
     }
     &-realization {
-        font-size: $font-18px;
+        font-size: $font-26px;
+        padding: 5px 10px;
         color: white;
-        background-color: $blue-lite;
+        background-color: $black;
         display: inline-flex;
         text-transform: uppercase;
+        margin-bottom: 50px;
+        border-radius: $border-radius;
     }
 }
 

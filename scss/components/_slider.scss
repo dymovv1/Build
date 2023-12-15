@@ -1,0 +1,15 @@
+.swiper {
+    padding: 10px;
+    border-radius: $border-radius;
+    filter: drop-shadow(2px 4px 6px $black);
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-slide__img {
+        width: 600px;
+        height: 500px;
+        display: inline-block;
+
+    }
+}

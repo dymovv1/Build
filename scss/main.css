@@ -24,6 +24,7 @@ body {
   color: #000000;
   background-color: #4e73b7;
   height: 100%;
+  padding-bottom: 150px;
 }
 
 h1 {
@@ -321,6 +322,7 @@ body.is-blocked::before {
   width: 100%;
   margin: 0;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .about-title {
@@ -416,18 +418,21 @@ body.is-blocked::before {
   background-color: #FFFFFF;
   padding: 10px;
   border-radius: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 .personal-title__text {
   font-size: 22px;
   text-align: center;
 }
 .personal-realization {
-  font-size: 18px;
+  font-size: 26px;
+  padding: 5px 10px;
   color: white;
-  background-color: #6495ed;
+  background-color: #000000;
   display: inline-flex;
   text-transform: uppercase;
+  margin-bottom: 50px;
+  border-radius: 5px;
 }
 
 @keyframes opacityBlock {
@@ -500,4 +505,18 @@ body.is-blocked::before {
   .main-home {
     padding-top: 70px;
   }
+}
+.swiper {
+  padding: 10px;
+  border-radius: 5px;
+  filter: drop-shadow(2px 4px 6px #000000);
+}
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.swiper-slide__img {
+  width: 600px;
+  height: 500px;
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */
