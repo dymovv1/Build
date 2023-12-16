@@ -160,19 +160,19 @@ body.is-blocked::before {
 
 @keyframes left {
     100% {
-        left: 0;
+        top: 0;
     }
     75% {
-        left: -15%;
+        top: -15%;
     }
     50% {
-        left: -35%;
+        top: -35%;
     }
     25% {
-        left: -67%;
+        top: -67%;
     }
     0% {
-        left: -80%;
+        top: -80%;
     }
 }
 
@@ -186,6 +186,12 @@ body.is-blocked::before {
         &-navigation {
             display: flex;
         }
+        &-nav__li {
+            box-shadow: 2px 2px 2px 0px $white;
+            display: flex;
+            justify-content: center;
+            padding: 5px 50px;
+        }
         &-nav.is-active{
             display: flex;
             flex-direction: column;
@@ -193,13 +199,16 @@ body.is-blocked::before {
         }
         &-langs.is-active {
             display: inline-flex;
+            margin-right: 0px;
         }
         &-langs__additional.is-active {
             margin-top: 50px;
         }
         &-wrapper {
-            display: block;
+            @include centerFlexJustifyAlign;
             position: absolute;
+            flex-direction: column;
+            gap: $gap-mobile;
             z-index: 1;
             background: $blue;
             left: 0;
@@ -208,9 +217,10 @@ body.is-blocked::before {
             
         }
         &-wrapper.is-active {
-            height: 100vh;
+            height: 70svh;
+            width: 100%;
+            margin-top: 69px;
             padding: 20px 10px 10px 20px;
-            width: 250px;
             animation-name: left;
             animation-duration: 0.5s;
             animation-timing-function: linear;
