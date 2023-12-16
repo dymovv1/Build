@@ -554,7 +554,34 @@ body.is-blocked::before {
   }
 }
 .footer {
-  background: #000000;
+  background: #4e73b7;
   color: #FFFFFF;
-  padding-top: 30px 0;
+  padding: 17px 0;
+  box-shadow: 0px 0px 3px 0px #000000;
+}
+.footer-contact, .footer-link {
+  color: #FFFFFF;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.footer-body {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-emails, .footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 996px) {
+  .footer-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-contact {
+    margin-bottom: 25px;
+  }
 }/*# sourceMappingURL=main.css.map */
