@@ -4,7 +4,7 @@
 }
 
 .main-wrapper {
-    background-image: url(../../assets/img/background_home.png);
+    background-image: url(../assets/img/background_home.png);
     position: sticky;
     top: 0;
     z-index: -1;
@@ -29,7 +29,7 @@
         box-shadow: 2px 2px 5px 0px $black;
     }
     &-title__text::after {
-        content: url(../../assets/img/helmet.png);
+        content: url(../assets/img/helmet.png);
         width: 64px;
         height: 64px
     }
@@ -218,7 +218,7 @@
     }
     .main {
         &-wrapper {
-            background-image: url(../../assets/img/background_home_mobile.png);
+            background-image: url(../assets/img/background_home_mobile.png);
         }
         &-home {
             padding-top: 70px;

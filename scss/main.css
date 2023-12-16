@@ -219,7 +219,7 @@ body.is-blocked::before {
 }
 
 #lang-logo::after {
-  content: url(../../assets/img/arrow_down.png);
+  content: url(../assets/img/arrow_down.png);
   display: inline-flex;
   margin-top: 6px;
   margin-left: 10px;
@@ -314,7 +314,7 @@ body.is-blocked::before {
 }
 
 .main-wrapper {
-  background-image: url(../../assets/img/background_home.png);
+  background-image: url(../assets/img/background_home.png);
   position: sticky;
   top: 0;
   z-index: -1;
@@ -340,7 +340,7 @@ body.is-blocked::before {
   box-shadow: 2px 2px 5px 0px #000000;
 }
 .about-title__text::after {
-  content: url(../../assets/img/helmet.png);
+  content: url(../assets/img/helmet.png);
   width: 64px;
   height: 64px;
 }
@@ -522,7 +522,7 @@ body.is-blocked::before {
     margin-bottom: 50px;
   }
   .main-wrapper {
-    background-image: url(../../assets/img/background_home_mobile.png);
+    background-image: url(../assets/img/background_home_mobile.png);
   }
   .main-home {
     padding-top: 70px;
