@@ -185,6 +185,7 @@
             font-size: $font-26px;
             flex-direction: column;
             gap: $gap-mobile;
+            padding: 5px;
         }
         &-title {
             padding: 1px 0px;
@@ -196,6 +197,7 @@
         }
         &-card {
             padding-top: 70px;
+            gap: 45px;
         }
     }
     .personal {

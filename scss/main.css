@@ -292,7 +292,7 @@ body.is-blocked::before {
     transition: all 0.5s;
   }
   .header-wrapper.is-active {
-    height: 100svh;
+    height: 100vh;
     padding: 20px 10px 10px 20px;
     width: 250px;
     animation-name: left;
@@ -491,6 +491,7 @@ body.is-blocked::before {
     font-size: 26px;
     flex-direction: column;
     gap: 20px;
+    padding: 5px;
   }
   .about-title {
     padding: 1px 0px;
@@ -502,6 +503,7 @@ body.is-blocked::before {
   }
   .about-card {
     padding-top: 70px;
+    gap: 45px;
   }
   .personal {
     padding-top: 100px;
