@@ -265,6 +265,9 @@ body.is-blocked::before {
   }
 }
 @media screen and (max-width: 886px) {
+  .header {
+    transition: none;
+  }
   .header-nav, .header-langs {
     display: none;
   }
