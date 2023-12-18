@@ -219,12 +219,24 @@
         }
     }
     .main {
-        &-wrapper {
-            background-image: url(../assets/img/bg_mobile.jpg);
-        }
+        // &-wrapper {
+        //     background-image: url(../assets/img/bg_mobile.jpg);
+        // }
         &-home {
             padding-top: 70px;
         }
+    }
+
+    .main-wrapper {
+        background-image: url(../assets/img/background_home_mobile.jpg);
+        position: sticky;
+        top: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        background-size: cover;
+        background-attachment: fixed;
     }
     
 }
