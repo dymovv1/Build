@@ -22,7 +22,6 @@ a {
 body {
   font-family: "Noto Sans", sans-serif;
   color: #000000;
-  background-color: #4e73b7;
   height: 100%;
 }
 
@@ -542,8 +541,7 @@ body.is-blocked::before {
     padding-top: 70px;
   }
   .main-wrapper {
-    background-image: none;
-    background-color: aquamarine;
+    background-image: url(../assets/img/bg_mobile.jpg);
     position: sticky;
     top: 0;
     z-index: -1;
