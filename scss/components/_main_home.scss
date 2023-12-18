@@ -228,7 +228,8 @@
     }
 
     .main-wrapper {
-        background-image: url(../assets/img/background_home_mobile.jpg);
+        background-image:none;
+        background-color: aquamarine;
         position: sticky;
         top: 0;
         z-index: -1;
