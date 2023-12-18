@@ -539,7 +539,7 @@ body.is-blocked::before {
     margin-bottom: 50px;
   }
   .main-wrapper {
-    background-image: url(../assets/img/background_home_mobile.jpg);
+    background-image: url(../assets/img/bg_mobile.jpg);
   }
   .main-home {
     padding-top: 70px;
