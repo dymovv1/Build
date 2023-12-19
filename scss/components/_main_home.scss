@@ -226,10 +226,12 @@
             padding-top: 70px;
         }
     }
+    
+}
 
+@media screen and (max-width:500px) {
     .main-wrapper {
-        background-position: center;
-        background-size: auto;
+        background-image: url(../assets/img/background_home_mobile.jpg);
     }
     
 }
