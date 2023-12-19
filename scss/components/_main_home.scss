@@ -225,11 +225,10 @@
     
 }
 
-// @media screen and (max-width:500px) {
-//     .main-wrapper {
-//         background-image: url(../assets/img/background_home_mobile.jpg);
-//         position: relative;
-//         background-size: cover;
-//     }
+@media screen and (max-width:500px) {
+    .main-wrapper {
+        background-image: url(../assets/img/background_home_mobile.jpg);
+        background-size: contain;
+    }
     
-// }
+}

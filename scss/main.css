@@ -540,6 +540,12 @@ body.is-blocked::before {
     padding-top: 70px;
   }
 }
+@media screen and (max-width: 500px) {
+  .main-wrapper {
+    background-image: url(../assets/img/background_home_mobile.jpg);
+    background-size: contain;
+  }
+}
 .swiper {
   border-radius: 5px;
   filter: drop-shadow(2px 4px 6px #000000);
