@@ -329,8 +329,7 @@ body.is-blocked::before {
 
 .main-wrapper {
   background-image: url(../assets/img/background_home.png);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: -1;
   height: 100%;
   width: 100%;
@@ -539,13 +538,6 @@ body.is-blocked::before {
   }
   .main-home {
     padding-top: 70px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .main-wrapper {
-    background-image: url(../assets/img/background_home_mobile.jpg);
-    position: relative;
-    background-size: cover;
   }
 }
 .swiper {
