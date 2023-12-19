@@ -544,6 +544,7 @@ body.is-blocked::before {
 @media screen and (max-width: 500px) {
   .main-wrapper {
     background-image: url(../assets/img/background_home_mobile.jpg);
+    position: relative;
   }
 }
 .swiper {
