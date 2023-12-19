@@ -541,15 +541,8 @@ body.is-blocked::before {
     padding-top: 70px;
   }
   .main-wrapper {
-    background-image: url(../assets/img/bg_mobile.jpg);
-    position: sticky;
-    top: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+    background-position: center;
     background-size: cover;
-    background-attachment: fixed;
   }
 }
 .swiper {
