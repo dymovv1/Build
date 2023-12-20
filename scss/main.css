@@ -330,7 +330,7 @@ body.is-blocked::before {
 
 .main-wrapper {
   position: relative;
-  height: 100vh;
+  height: 100svh;
 }
 
 .main-wrapper::before {
@@ -545,6 +545,9 @@ body.is-blocked::before {
   }
   .main-home {
     padding-top: 70px;
+  }
+  .main-wrapper::before {
+    background-image: url(../assets/img/background_home_mobile.jpg);
   }
 }
 .swiper {

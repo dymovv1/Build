@@ -5,8 +5,7 @@
 
 .main-wrapper {
     position: relative;
-    height: 100vh;
-    // overflow: hidden;
+    height: 100svh;
 }
 
 .main-wrapper::before {
@@ -228,9 +227,9 @@
         &-home {
             padding-top: 70px;
         }
-        // &-wrapper {
-        //     background-image: url(../assets/img/background_home_mobile.jpg);
-        // }
+        &-wrapper::before {
+            background-image: url(../assets/img/background_home_mobile.jpg);
+        }
     }
     
 }
