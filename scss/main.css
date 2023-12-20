@@ -330,7 +330,6 @@ body.is-blocked::before {
 
 .main-wrapper {
   position: relative;
-  height: 100vh;
 }
 
 .main-wrapper::before {
