@@ -3,7 +3,7 @@
     padding-bottom: 150px;
 }
 
-body {
+.main-wrapper {
     background-image: url(../assets/img/background_home.png);
     position: relative;
     z-index: -1;
@@ -12,10 +12,6 @@ body {
     margin: 0;
     background-size: cover;
     background-attachment: fixed;
-}
-
-.main-wrapper {
-
 }
 
 .about {
@@ -225,16 +221,10 @@ body {
         &-home {
             padding-top: 70px;
         }
+        &-wrapper {
+            background-image: url(../assets/img/background_home_mobile.jpg);
+        }
     }
     
 }
 
-@media screen and (max-width:500px) {
-    body {
-        background-image: url(../assets/img/background_home_mobile.jpg);
-        background-size: cover;
-        position: fixed;
-        top: 0;
-    }
-    
-}
