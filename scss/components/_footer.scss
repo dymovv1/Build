@@ -18,6 +18,13 @@
         flex-direction: column;
         gap: 10px;
     }
+    &-contact__link {
+        text-transform: uppercase;
+        color: $white;
+    }
+    &-contact__link:hover {
+        text-decoration: underline;
+    }
 }
 
 @media screen and (max-width:996px) {

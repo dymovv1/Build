@@ -596,6 +596,13 @@ body.is-blocked::before {
   flex-direction: column;
   gap: 10px;
 }
+.footer-contact__link {
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.footer-contact__link:hover {
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 996px) {
   .footer-body {
