@@ -1,0 +1,33 @@
+.main {
+    &-contact {
+        padding: 100px 0;
+    }
+}
+.contact {
+    &-info__body {
+        display: inline-flex;
+        flex-direction: column;
+        gap: $gap-pc;
+        max-width: 540px;
+
+    }
+    &-info {
+        display: flex;
+        background-color: $white;
+        justify-content: space-between;
+        padding-left: 25px;
+        align-items: center;
+        filter: drop-shadow(2px 4px 6px black);
+        border-radius: $border-radius;
+        margin-bottom: 70px;
+    }
+    &-telephone , &-email {
+        color: $black !important; // change only color text
+    }
+    &-img {
+        max-height: 400px;
+        animation-name: leftBlockOpacity;
+        animation-duration: 0.8s;
+        animation-timing-function: linear;
+    }
+}

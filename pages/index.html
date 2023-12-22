@@ -10,49 +10,9 @@
 </head>
 <body class="main-wrapper">
 
-    <header class="header">
-        <div class="container">
-            <div class="header-body">
-
-                <div>
-                    <a class="header-logo" href="./index.html">BUDON.INFO</a>
-                </div>
-
-                <nav class="header-navigation">
-
-                    <div class="burger-menu">
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                    </div>
-
-                    <div class="header-wrapper">
-
-                    <ul class="header-nav">
-                        <li><a class="header-nav__li" data-eng="over us" data-france="sur nous" data-netherlands="over ons"  href="./index.html"></a> <span></span> </li>                  
-                        <li><a class="header-nav__li" href="./index.html">Contact</a></li> 
-                        <li><a class="header-nav__li mr-30px" data-eng="Add-some ENG" data-france="Add-some FRA" data-netherlands="Add-some NTH" href="./index.html"> <span></span></a></li>
-                    </ul>
-
-                    <div>
-                        <ul class="header-langs">
-                            <li id="lang-logo"><img src="../assets/img/lang_logo.png" alt="lang-logo"></li>
-                            <div class="header-langs__additional">
-                            <li id="english" class="header-lang__toggle">English <img src="../assets/img/english.png" alt="english"></li>
-                            <li id="france" class="header-lang__toggle">France <img src="../assets/img/france.png" alt="france"></li>
-                            <li id="netherlands" class="header-lang__toggle"">Netherlands<img src="../assets/img/netherlands.png" alt="netherlands"></li>
-                            </div>
-                        </ul>
-                    </div>
-                </nav>
-                </div>
-                
-            </div>
-        </div>
-    </header>
-
-    <div>
-        <!-- <img src="../assets/img/background_home.png" alt="background_home"> -->
+    <div class="header">
+        <header id="header_component"></header>
+    </div>
 
     <main class="main-home">
         <div class="container">
@@ -141,33 +101,13 @@
     </main>
 </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-body">
+    <footer id="footer_component"></footer>
 
-                <div class="footer-contact">
-                    <p><a class="footer-contact__link" href="#">Contact</a></p>
-                    <p>
-                        BUDON LIMITED LIABILITY COMPANY
-                        UL. JOHN HEWELIUSZ 11/811, 80-890 GDANSK
-                    </p>
-                </div>
-
-                <div class="footer-emails">
-                    <a class="footer-link" href="mailto:spz.budon@gmail.com" data-eng="spz.budon@gmail.com - for info" data-france="spz.budon@gmail.com - pour information" data-netherlands="spz.budon@gmail.com - voor info"></a>
-                    <a class="footer-link" href="mailto:sp.budon@wp.pl" data-eng="sp.budon@wp.pl - for bills" data-france="sp.budon@wp.pl - pour les factures" data-netherlands="sp.budon@wp.pl - voor rekeningen"></a>
-                </div>                
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
+    <script src="../js/header_component.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/lang.js"></script>
     <script src="../js/burger_menu.js"></script>
+    <script src="../js/footer_component.js"></script>
 
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';

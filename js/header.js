@@ -1,5 +1,5 @@
 let lastScrollTop = 0;
-const header = document.querySelector('header');
+const header = document.querySelector('.header');
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const mediaQuery = window.matchMedia('(max-width: 886px)');
@@ -24,7 +24,9 @@ function handleMediaQueryChange(e) {
         header.classList.remove('sticky-header');
         window.addEventListener('scroll', handleScroll);
     }
+    window.addEventListener('scroll', handleScroll);
 }
+
 
 handleMediaQueryChange(mediaQuery);
 

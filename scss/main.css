@@ -91,7 +91,6 @@ h2, h3 {
 .header {
   background-color: #4e73b7;
   padding: 10px 0;
-  position: relative;
   z-index: 100;
   box-shadow: 0px -2px 8px 1px #000000;
   transition: transform 0.3s ease;
@@ -549,6 +548,36 @@ body.is-blocked::before {
     background-image: url(../assets/img/background_home_mobile.jpg);
   }
 }
+.main-contact {
+  padding: 100px 0;
+}
+
+.contact-info__body {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 540px;
+}
+.contact-info {
+  display: flex;
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  padding-left: 25px;
+  align-items: center;
+  filter: drop-shadow(2px 4px 6px black);
+  border-radius: 5px;
+  margin-bottom: 70px;
+}
+.contact-telephone, .contact-email {
+  color: #000000 !important;
+}
+.contact-img {
+  max-height: 400px;
+  animation-name: leftBlockOpacity;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+}
+
 .swiper {
   border-radius: 5px;
   filter: drop-shadow(2px 4px 6px #000000);
