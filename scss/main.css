@@ -582,11 +582,14 @@ body.is-blocked::before {
   gap: 35px;
   max-width: 540px;
 }
+.contact-body {
+  text-align: start;
+}
 .contact-info {
   display: flex;
   background-color: #FFFFFF;
   justify-content: space-between;
-  padding-left: 25px;
+  padding: 0px 0px 5px 25px;
   align-items: center;
   filter: drop-shadow(2px 4px 6px #000000);
   border-radius: 5px;
@@ -602,6 +605,16 @@ body.is-blocked::before {
   animation-timing-function: linear;
 }
 
+@media screen and (max-width: 1125px) {
+  .contact-info {
+    flex-direction: column-reverse;
+    display: inline-flex;
+    padding: 0px 0px 10px 0px;
+  }
+  .contact-body {
+    text-align: center;
+  }
+}
 .contact-form__body {
   display: inline-flex;
   flex-direction: column;
@@ -636,6 +649,11 @@ body.is-blocked::before {
   width: 130px;
 }
 
+@media screen and (max-width: 580px) {
+  .contact-input {
+    max-width: 325px;
+  }
+}
 .swiper {
   border-radius: 5px;
   filter: drop-shadow(2px 4px 6px #000000);

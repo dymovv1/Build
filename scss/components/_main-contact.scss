@@ -9,13 +9,15 @@
         flex-direction: column;
         gap: $gap-pc;
         max-width: 540px;
-
+    }
+    &-body {
+        text-align: start;
     }
     &-info {
         display: flex;
         background-color: $white;
         justify-content: space-between;
-        padding-left: 25px;
+        padding: 0px 0px 5px 25px;
         align-items: center;
         filter: drop-shadow(2px 4px 6px $black);
         border-radius: $border-radius;
@@ -30,4 +32,19 @@
         animation-duration: 0.8s;
         animation-timing-function: linear;
     }
+}
+
+@media screen and (max-width: 1125px){
+    .contact {
+        &-info {
+            flex-direction: column-reverse;
+            display: inline-flex;
+            padding: 0px 0px 10px 0px;
+
+        }
+        &-body {
+            text-align: center;
+        }
+    }
+    
 }
