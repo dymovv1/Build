@@ -589,7 +589,7 @@ body.is-blocked::before {
   display: flex;
   background-color: #FFFFFF;
   justify-content: space-between;
-  padding: 0px 0px 5px 25px;
+  padding: 0px 0px 0px 25px;
   align-items: center;
   filter: drop-shadow(2px 4px 6px #000000);
   border-radius: 5px;
@@ -613,6 +613,9 @@ body.is-blocked::before {
   }
   .contact-body {
     text-align: center;
+  }
+  .contact-info__body {
+    padding: 0 15px;
   }
 }
 .contact-form__body {
@@ -647,6 +650,7 @@ body.is-blocked::before {
   cursor: pointer;
   display: inline-block;
   width: 130px;
+  text-align: start;
 }
 
 @media screen and (max-width: 580px) {
