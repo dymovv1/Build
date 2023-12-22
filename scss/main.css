@@ -88,6 +88,26 @@ h2, h3 {
   font-weight: 800;
   src: url("../assets/fonts/noto-sans-v35-cyrillic_greek_latin_latin-ext-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.button {
+  border: none;
+  outline: none;
+  background-color: #6495ed;
+  font-family: "Noto Sans", sans-serif;
+  color: #FFFFFF;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  background-color: #4e73b7;
+  border: 1px solid #f3f6f8;
+}
+
 .header {
   background-color: #4e73b7;
   padding: 10px 0;
@@ -136,6 +156,7 @@ h2, h3 {
   animation: fromDown;
   animation-duration: 0.5s;
   animation-timing-function: linear;
+  filter: drop-shadow(2px 4px 6px #000000);
 }
 .header-lang__toggle:hover {
   transition: all 0.3s;
@@ -320,6 +341,9 @@ body.is-blocked::before {
   }
   .burger-menu {
     display: inline-flex;
+  }
+  .header.is-hidden {
+    transform: translateY(0);
   }
 }
 .main-home {
@@ -564,7 +588,7 @@ body.is-blocked::before {
   justify-content: space-between;
   padding-left: 25px;
   align-items: center;
-  filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 6px #000000);
   border-radius: 5px;
   margin-bottom: 70px;
 }
@@ -576,6 +600,40 @@ body.is-blocked::before {
   animation-name: leftBlockOpacity;
   animation-duration: 0.8s;
   animation-timing-function: linear;
+}
+
+.contact-form__body {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #4e73b7;
+  padding: 10px 15px;
+  border-radius: 5px;
+  filter: drop-shadow(2px 4px 6px #000000);
+}
+.contact-input {
+  outline: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border-color: transparent;
+  width: 500px;
+  background-color: #2d2f30;
+  font-family: "Noto Sans", sans-serif;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1.7px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.contact-input:focus {
+  border: 1px solid #f3f6f8;
+}
+.contact-label {
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  width: 130px;
 }
 
 .swiper {

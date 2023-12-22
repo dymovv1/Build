@@ -17,7 +17,7 @@
         justify-content: space-between;
         padding-left: 25px;
         align-items: center;
-        filter: drop-shadow(2px 4px 6px black);
+        filter: drop-shadow(2px 4px 6px $black);
         border-radius: $border-radius;
         margin-bottom: 70px;
     }

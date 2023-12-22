@@ -40,6 +40,7 @@
         animation: fromDown;
         animation-duration: 0.5s;
         animation-timing-function: linear;
+        filter: drop-shadow(2px 4px 6px $black);
     }
     &-lang__toggle:hover {
         transition: all 0.3s;
@@ -233,6 +234,10 @@ body.is-blocked::before {
     }
     .burger-menu {
         display: inline-flex;
+    }
+
+    .header.is-hidden {
+        transform: translateY(0);
     }
     
 }

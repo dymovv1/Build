@@ -1,0 +1,36 @@
+.contact {
+    &-form__body {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: $blue;
+        padding: 10px 15px;
+        border-radius: $border-radius;
+        filter: drop-shadow(2px 4px 6px $black);
+    }
+    &-input {
+        outline: none;
+        padding: 7px 10px;
+        border-radius: $border-radius;
+        border-color: transparent;
+        width: 500px;
+        background-color: $form-color-dark;
+        font-family: 'Noto Sans', sans-serif;
+        color: $white;
+        font-weight: 400;
+        font-size: $font-18px;
+        letter-spacing: 1.7px;
+        border: 1px solid transparent;
+        transition: all 0.3s;
+
+    }
+    &-input:focus {
+        border: 1px solid $gray;
+    }
+    &-label {
+        color: $white;
+        cursor: pointer;
+        display: inline-block;
+        width: 130px;
+    }
+}
