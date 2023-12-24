@@ -139,9 +139,8 @@ h2, h3 {
   color: #000000;
 }
 .header-logo {
-  font-size: 36px;
-  font-weight: 600;
-  color: powderblue;
+  width: 130px;
+  display: inline-block;
 }
 .header-langs__additional {
   display: none;
@@ -304,6 +303,9 @@ body.is-blocked::before {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  .header-logo {
+    width: 100px;
   }
   .header-langs.is-active {
     display: inline-flex;

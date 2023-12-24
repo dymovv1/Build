@@ -23,9 +23,8 @@
         color: $black;
     }
     &-logo {
-        font-size: $font-36px;
-        font-weight: 600;
-        color: powderblue;
+        width: 130px;
+        display: inline-block;
     }
     &-langs__additional {
         display: none;
@@ -197,6 +196,9 @@ body.is-blocked::before {
             display: flex;
             flex-direction: column;
             gap: $gap-mobile;      
+        }
+        &-logo {
+            width: 100px;
         }
         &-langs.is-active {
             display: inline-flex;
