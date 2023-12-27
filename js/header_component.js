@@ -19,9 +19,9 @@ headerComponent.innerHTML = `<header>
             <div class="header-wrapper">
 
             <ul class="header-nav">
-                <li><a class="header-nav__li" data-eng="over us" data-france="sur nous" data-netherlands="over ons"  href="index.html"></a></li>                  
+                <li><a class="header-nav__li" data-eng="over us" data-france="sur nous" data-netherlands="over ons"  href="./index.html"></a></li>                  
                 <li><a class="header-nav__li" href="./pages/contact.html">Contact</a></li> 
-                <li><a class="header-nav__li mr-30px" data-eng="Add-some ENG" data-france="Add-some FRA" data-netherlands="Add-some NTH" href="index.html"></a></li>
+                <li><a class="header-nav__li mr-30px" data-eng="Add-some ENG" data-france="Add-some FRA" data-netherlands="Add-some NTH" href="./index.html"></a></li>
             </ul>
 
             <div>
