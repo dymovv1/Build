@@ -4,7 +4,7 @@ footerComponent.innerHTML = `<footer class="footer">
     <div class="footer-body">
 
         <div class="footer-contact">
-            <p><a class="footer-contact__link" target="_blank" href="./contact.html">Contact</a></p>
+            <p><a class="footer-contact__link" target="_blank" href="./pages/contact.html">Contact</a></p>
             <p>
                 BUDON LIMITED LIABILITY COMPANY
                 UL. JOHN HEWELIUSZ 11/811, 80-890 GDANSK
