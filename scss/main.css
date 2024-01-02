@@ -115,6 +115,9 @@ h2, h3 {
   box-shadow: 0px -2px 8px 1px #000000;
   transition: transform 0.3s ease;
   position: sticky;
+  animation-name: leftBlockOpacity;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
   top: 0;
 }
 .header-body {
@@ -330,7 +333,7 @@ body.is-blocked::before {
   .header-wrapper.is-active {
     height: 70svh;
     width: 100%;
-    margin-top: 69px;
+    margin-top: 68px;
     padding: 20px 10px 10px 20px;
     animation-name: left;
     animation-duration: 0.5s;
@@ -373,8 +376,7 @@ body.is-blocked::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000000;
-  background-color: #FFFFFF;
+  color: #FFFFFF;
   padding: 15px 0;
   border-radius: 5px;
   position: relative;
@@ -382,6 +384,9 @@ body.is-blocked::before {
   animation-duration: 0.8s;
   animation-timing-function: linear;
   box-shadow: 2px 2px 5px 0px #000000;
+  margin-bottom: 70px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .about-title__text::after {
   content: url(../assets/img/helmet.png);
@@ -403,6 +408,31 @@ body.is-blocked::before {
   gap: 35px;
   align-items: baseline;
 }
+.about-card__info {
+  max-width: 350px;
+  color: #FFFFFF;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  padding: 5px;
+  border-radius: 5px;
+  letter-spacing: 0.4px;
+  border: 1px solid #FFFFFF;
+}
+.about-intro__img {
+  margin-bottom: 50px;
+}
+.about-intro__title, .about-intro__text {
+  color: #FFFFFF;
+}
+.about-intro__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 15px 5px;
+  border-radius: 5px;
+}
 .about-card__item {
   background-color: #FFFFFF;
   display: flex;
@@ -417,17 +447,17 @@ body.is-blocked::before {
   width: 350px;
   text-align: center;
   font-weight: 500;
-  box-shadow: 14px 14px 0px 1px #000000;
+  margin-bottom: 30px;
   transition: all 0.5s;
   animation-name: opacityBlock;
   animation-duration: 0.5s;
   animation-timing-function: linear;
 }
 .about-card__item:hover {
-  box-shadow: 14px -24px 0px 1px #6495ed;
+  box-shadow: 0px 0px 30px 0px #6495ed;
 }
 .about-card__item:hover .about-card__img {
-  transform: scale(1.05);
+  transform: scale(1.09);
   transition: all 0.5s;
 }
 
@@ -541,9 +571,6 @@ body.is-blocked::before {
     padding: 1px 0px;
     gap: 20px;
     text-align: center;
-  }
-  .about-card__item:hover {
-    box-shadow: 10px -10px 0px 1px #6495ed;
   }
   .about-card {
     padding-top: 70px;

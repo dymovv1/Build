@@ -22,8 +22,7 @@
 .about {
     &-title {
         @include centerFlexJustifyAlign;
-        color: $black;
-        background-color: $white;
+        color: $white;
         padding: 15px 0;
         border-radius: $border-radius;
         position: relative;
@@ -31,6 +30,8 @@
         animation-duration: 0.8s;
         animation-timing-function: linear;
         box-shadow: 2px 2px 5px 0px $black;
+        margin-bottom: 70px;
+        backdrop-filter: blur(10px);
     }
     &-title__text::after {
         content: url(../assets/img/helmet.png);
@@ -48,6 +49,29 @@
         gap: $gap-pc;
         align-items: baseline;
     }
+    &-card__info {
+        max-width: 350px;
+        color: $white;
+        backdrop-filter: blur(15px);
+        padding: 5px;
+        border-radius: $border-radius;
+        letter-spacing: 0.4px;
+        border: 1px solid $white;
+    }
+    &-intro__img {
+        margin-bottom: 50px;
+    }
+    &-intro__title, &-intro__text {
+        color: $white;
+    }
+    &-intro__info {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-mobile;
+        backdrop-filter: blur(10px);
+        padding: 15px 5px;
+        border-radius: $border-radius;
+    }
     &-card__item {
         background-color: $white;
         @include centerFlexJustifyAlign;
@@ -60,17 +84,17 @@
         width: 350px;
         text-align: center;
         font-weight: 500;
-        box-shadow: 14px 14px 0px 1px $black;
+        margin-bottom: 30px;
         transition: all 0.5s;
         animation-name: opacityBlock;
         animation-duration: 0.5s;
         animation-timing-function: linear;
     }
     &-card__item:hover {
-        box-shadow: 14px -24px 0px 1px $blue-lite;
+        box-shadow: 0px 0px 30px 0px $blue-lite;
     }
     &-card__item:hover &-card__img {
-        transform: scale(1.05);
+        transform: scale(1.09);
         transition: all 0.5s;
     }
 }
@@ -195,9 +219,6 @@
             padding: 1px 0px;
             gap: $gap-mobile;
             text-align: center;
-        }
-        &-card__item:hover {
-            box-shadow: 10px -10px 0px 1px #6495ed;
         }
         &-card {
             padding-top: 70px;
