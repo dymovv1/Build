@@ -468,7 +468,7 @@ body.is-blocked::before {
   gap: 35px;
 }
 .about-why__content {
-  padding: 10px 15px 0px 0px;
+  padding: 10px 15px 10px 0px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -577,6 +577,16 @@ body.is-blocked::before {
     opacity: 0;
   }
 }
+@media screen and (max-width: 1150px) {
+  .about-why {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-why__block_img {
+    width: 100%;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 996px) {
   .about-title__text {
     font-size: 26px;
@@ -589,6 +599,9 @@ body.is-blocked::before {
     gap: 20px;
     padding: 5px;
   }
+  .about-intro__title {
+    font-size: 22px;
+  }
   .about-title {
     padding: 1px 0px;
     gap: 20px;
@@ -597,6 +610,26 @@ body.is-blocked::before {
   .about-card {
     padding-top: 70px;
     gap: 45px;
+    padding-bottom: 70px;
+  }
+  .about-why {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
+  .about-why__content {
+    padding-left: 10px;
+  }
+  .about-why__text {
+    font-size: 17px;
+  }
+  .about-why__img {
+    max-width: 300px;
+  }
+  .about-why__block_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .personal {
     padding-top: 100px;
