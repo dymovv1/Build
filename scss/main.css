@@ -401,6 +401,7 @@ body.is-blocked::before {
 }
 .about-card {
   padding-top: 150px;
+  padding-bottom: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -460,6 +461,26 @@ body.is-blocked::before {
   transform: scale(1.09);
   transition: all 0.5s;
 }
+.about-why {
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 35px;
+}
+.about-why__content {
+  padding: 10px 15px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-why__block_img {
+  background-color: #4e73b7;
+  display: inline-flex;
+  padding: 15px 15px 5px 15px;
+}
+.about-why__img {
+  max-width: 500px;
+}
 
 .about-card__item:nth-child(1) {
   animation-duration: 0.1s;
@@ -486,7 +507,7 @@ body.is-blocked::before {
 }
 
 .personal {
-  padding-top: 200px;
+  padding-top: 150px;
 }
 .personal-title {
   background-color: #FFFFFF;
@@ -502,11 +523,12 @@ body.is-blocked::before {
 .personal-realization {
   font-size: 26px;
   padding: 5px 10px;
-  color: #000000;
+  color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 100px;
