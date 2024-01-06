@@ -1,40 +1,74 @@
-<?php 
+<?php
 
-require_once('phpmailer/PHPMailerAutoload.php');
-$mail = new PHPMailer;
-$mail->CharSet = 'utf-8';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-$name = $_POST['name'];
-$phone = $_POST['telephone'];
-$email = $_POST['email'];
+// Підключення бібліотеки PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  																							// Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'requestbudon@gmail.com'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'requestbudon777'; // Ваш пароль от почты с которой будут отправляться письма
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+try {
+    if(isset($_POST["submit"])) {
+        // Створення об'єкта PHPMailer
+        $mail = new PHPMailer(true);
+        $mail->CharSet = "utf-8"; // встановлення кодування utf-8
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
-$mail->setFrom('requestbudon@gmail.com'); // от кого будет уходить письмо?
-$mail->addAddress('oscar.roodby@gmail.com');     // Кому будет уходить письмо 
-//$mail->addAddress('ellen@example.com');               // Name is optional
-//$mail->addReplyTo('info@example.com', 'Information');
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+        // Налаштування для використання SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'requestbudon@gmail.com';
+        $mail->Password = 'kfiunvxpkrdpdoct';
+        $mail->SMTPSecure = 'ssl'; // зміна типу з'єднання
+        $mail->Port = 465;
 
-$mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
-$mail->AltBody = '';
+        $mail->SMTPOptions = array(
+        'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+        )
+        );
 
-if(!$mail->send()) {
-    echo 'Error';
-} else {
-    header('location: thank-you.html');
+        // Встановлення адреси відправника
+        $mail->setFrom('requestbudon@gmail.com');
+
+        // Встановлення адреси отримувача з форми
+        $mail->addAddress('oscar.roodby@gmail.com');  // Замініть на свою поштову скриньку
+
+        // Встановлення формату повідомлення (HTML)
+        $mail->isHTML(true);
+
+        // Встановлення теми та тіла повідомлення з форми
+        $mail->Subject = 'New Contact Form Submission';
+        $mail->Body = "Name: {$_POST['name']}<br>"
+            ."Surname: {$_POST['surname']}<br>"
+            ."Adress: {$_POST['adress']}<br>"
+            ."Postcode: {$_POST['postcode']}<br>"
+            ."Local Authority: {$_POST['commune']}<br>"
+            ."Telephone: {$_POST['telephone']}<br>"
+            ."Email: {$_POST['email']}<br>"
+            ."Message: {$_POST['message']}";
+
+        // Відправлення повідомлення
+        if ($mail->send()) {
+            echo "<script>alert('Your Message is sent!');</script>";
+        } else {
+            echo "<script>alert('Message could not be sent. Mailer Error: " . $mail->ErrorInfo . "');</script>";
+        }
+
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+
+        // Виведення повідомлення користувачу та перенаправлення на іншу сторінку
+    }
+} catch (Exception $e) {
+    // Замініть цей рядок, якщо ви хочете вивести повідомлення про помилку
+    echo 'Помилка: ' . $e->getMessage();
 }
+
 ?>
