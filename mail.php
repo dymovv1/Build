@@ -15,7 +15,6 @@ try {
     if(isset($_POST["submit"])) {
         // Створення об'єкта PHPMailer
         $mail = new PHPMailer(true);
-        $mail->CharSet = "utf-8"; // встановлення кодування utf-8
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
         // Налаштування для використання SMTP
@@ -25,6 +24,7 @@ try {
         $mail->Username = 'requestbudon@gmail.com';
         $mail->Password = 'kfiunvxpkrdpdoct';
         $mail->SMTPSecure = 'ssl'; // зміна типу з'єднання
+        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
         $mail->SMTPOptions = array(
