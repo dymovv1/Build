@@ -55,6 +55,11 @@
         <div class="container">
             <div class="contact-body">
                 <section class="contact-info">
+
+                    <div>
+                        <img class="contact-img" src="../assets/img/contact.webp" alt="contact">
+                    </div>
+
                     <div class="contact-info__body">
                     
                     <div>
@@ -88,21 +93,17 @@
                     </div>
                     </div>
 
-                    <div>
-                        <img class="contact-img" src="../assets/img/contact.webp" alt="contact">
-                    </div>
-
                 </section>
 
                 <section class="contact-form">
                     <form action="../mail.php" method="post" class="contact-form__body">
 
                         <label class="contact-label" for="name" data-eng="Name*" data-france="Nom*" data-netherlands="Naam*"></label>
-                        <input type="text" id="name" name="name" class="contact-input"> 
+                        <input type="text" id="name" name="name" class="contact-input input-req-name"> 
                         
 
                         <label class="contact-label" for="surname" data-eng="Surname*" data-france="Non De Famille*" data-netherlands="Voornaam*"></label>
-                        <input type="text" id="surname" name="surname" class="contact-input"> 
+                        <input type="text" id="surname" name="surname" class="contact-input input-req-name"> 
                         
                         
                         <label class="contact-label" for="adress" data-eng="Adress" data-france="Adresse" data-netherlands="Adres"></label>
@@ -118,15 +119,15 @@
                         
 
                         <label class="contact-label" for="telephone" data-eng="Telephone*" data-france="Téléphone*" data-netherlands="Telefoon*"></label>
-                        <input type="tel" id="telephone" name="telephone" class="contact-input"> 
+                        <input type="tel" id="telephone" name="telephone" class="contact-input input-req-tel"> 
                         
                         
                         <label class="contact-label" for="email" data-eng="E-mail*" data-france="E-mail*" data-netherlands="E-mail*"></label>
-                        <input type="email" id="email" name="email" class="contact-input"> 
+                        <input type="email" id="email" name="email" class="contact-input input-req-email"> 
                         
                         
                         <label class="contact-label" for="message" data-eng="Message*" data-france="Message*" data-netherlands="Bericht*"></label>
-                        <input type="text" id="message" name="message" class="contact-input"> 
+                        <input type="text" id="message" name="message" class="contact-input input-req-message"> 
 
                         <div>
                             <button 

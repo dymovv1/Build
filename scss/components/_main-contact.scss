@@ -12,16 +12,19 @@
     }
     &-body {
         text-align: start;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
     &-info {
-        display: flex;
+        display: inline-flex;
+        flex-direction: column;
         background-color: $white;
         justify-content: space-between;
-        padding: 0px 0px 0px 25px;
         align-items: center;
+        padding-bottom: 10px;
         filter: drop-shadow(2px 4px 6px $black);
         border-radius: $border-radius;
-        margin-bottom: 70px;
     }
     &-telephone , &-email {
         color: $black !important; // change only color text
@@ -34,20 +37,21 @@
     }
 }
 
-@media screen and (max-width: 1125px){
+@media screen and (max-width: 1200px) {
     .contact {
-        &-info {
-            flex-direction: column-reverse;
-            display: inline-flex;
-            padding: 0px 0px 10px 0px;
-
-        }
         &-body {
-            text-align: center;
+            flex-direction: column-reverse;
+            gap: 50px;
+            align-items: center;
         }
-        &-info__body {
-            padding: 0 15px;
+        &-info {
+            max-width: 610px;
+        }
+        &-info__body { 
+            padding: 0 10px;
         }
     }
     
 }
+
+

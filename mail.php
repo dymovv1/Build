@@ -1,9 +1,8 @@
-<?php
+<!-- <?php
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Підключення бібліотеки PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -26,14 +25,6 @@ try {
         $mail->SMTPSecure = 'ssl'; // зміна типу з'єднання
         // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
-
-        $mail->SMTPOptions = array(
-        'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
-        )
-        );
 
         // Встановлення адреси відправника
         $mail->setFrom('requestbudon@gmail.com');
@@ -71,4 +62,4 @@ try {
     echo 'Помилка: ' . $e->getMessage();
 }
 
-?>
+?> -->

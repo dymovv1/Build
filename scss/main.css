@@ -668,16 +668,19 @@ body.is-blocked::before {
 }
 .contact-body {
   text-align: start;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 .contact-info {
-  display: flex;
+  display: inline-flex;
+  flex-direction: column;
   background-color: #FFFFFF;
   justify-content: space-between;
-  padding: 0px 0px 0px 25px;
   align-items: center;
+  padding-bottom: 10px;
   filter: drop-shadow(2px 4px 6px #000000);
   border-radius: 5px;
-  margin-bottom: 70px;
 }
 .contact-telephone, .contact-email {
   color: #000000 !important;
@@ -689,17 +692,17 @@ body.is-blocked::before {
   animation-timing-function: linear;
 }
 
-@media screen and (max-width: 1125px) {
-  .contact-info {
-    flex-direction: column-reverse;
-    display: inline-flex;
-    padding: 0px 0px 10px 0px;
-  }
+@media screen and (max-width: 1200px) {
   .contact-body {
-    text-align: center;
+    flex-direction: column-reverse;
+    gap: 50px;
+    align-items: center;
+  }
+  .contact-info {
+    max-width: 610px;
   }
   .contact-info__body {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 .contact-form__body {
