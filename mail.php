@@ -1,7 +1,7 @@
 <!-- <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -14,7 +14,7 @@ try {
     if(isset($_POST["submit"])) {
         // Створення об'єкта PHPMailer
         $mail = new PHPMailer(true);
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
         // Налаштування для використання SMTP
         $mail->isSMTP();
@@ -25,6 +25,14 @@ try {
         $mail->SMTPSecure = 'ssl'; // зміна типу з'єднання
         // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
+
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+            )
+            );
 
         // Встановлення адреси відправника
         $mail->setFrom('requestbudon@gmail.com');
@@ -53,13 +61,13 @@ try {
             echo "<script>alert('Message could not be sent. Mailer Error: " . $mail->ErrorInfo . "');</script>";
         }
 
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        // echo 'Mailer Error: ' . $mail->ErrorInfo;
 
         // Виведення повідомлення користувачу та перенаправлення на іншу сторінку
     }
 } catch (Exception $e) {
     // Замініть цей рядок, якщо ви хочете вивести повідомлення про помилку
-    echo 'Помилка: ' . $e->getMessage();
+    // echo 'Помилка: ' . $e->getMessage();
 }
 
 ?> -->
